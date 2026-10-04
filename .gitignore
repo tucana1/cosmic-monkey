@@ -1,2 +1,5 @@
-./solution/cosmic_monkey
-./solution/cosmic_monkey_debug
+solution/cosmic_monkey
+solution/cosmic_monkey_debug
+stencil/cosmic_monkey
+stencil/cosmic_monkey_debug
+*.dSYM/
