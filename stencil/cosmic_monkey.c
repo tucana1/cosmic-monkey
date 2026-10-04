@@ -45,8 +45,8 @@ int32_t cosmic_monkey(void *data, size_t size) {
     if (data == NULL || size == 0) {
         return -1;
     }
-
-    uint8_t *bytes = (uint8_t *)data;
+    // has to be casted to an integer
+    uint8_t * bytes = (uint8_t *)data;
 
     size_t byte_index = (size_t)rand() % size;
     uint8_t bit_index = (uint8_t)(rand() % 8);
@@ -57,7 +57,7 @@ int32_t cosmic_monkey(void *data, size_t size) {
         return -1;
     }
 #endif
-
+    // where the actual flip happens, 
     bytes[byte_index] ^= (uint8_t)(1u << bit_index);
 
     return 0;
@@ -79,7 +79,7 @@ int32_t cosmic_monkey(void *data, size_t size) {
  */
 
 int32_t print_bytes(void *data, size_t size) {
-    uint8_t *bytes = (uint8_t *)data;
+    uint8_t * bytes = (uint8_t *)data;
 
     for (size_t i = 0; i < size; i++) {
         if (printf("%02X ", bytes[i]) < 0) {
